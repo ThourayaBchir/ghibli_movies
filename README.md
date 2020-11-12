@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ```
 
 ### To launch the app
-Then there is two option to run the app:
+Then there is two options to run the app:
 
 1/ 
 
@@ -36,7 +36,7 @@ flask run -h localhost -p 8000
 nosetests
 ````
 
-### to test pep8 requirements
+### To test pep8 requirements
 
 ```
 flake8
