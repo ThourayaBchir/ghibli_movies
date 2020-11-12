@@ -8,7 +8,7 @@ python3 -m venv ghibli_venv
 
 source ghibli_venv/bin/activate
 
-git clone 
+git clone git@github.com:ThourayaBchir/ghibli_movies.git
 
 pip install -r requirements.txt
 
