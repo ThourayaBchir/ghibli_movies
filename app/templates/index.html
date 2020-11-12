@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ghibli Studio Films</title>
+</head>
+<body>
+    <h1>List of films: </h1>
+    {% for film in films_list %}
+        <div style="font-weight: bold">{{film.title}}</div>
+        {% for name in film.names %}
+            <div>{{name}}</div>
+        {% endfor %}
+    <br/>
+    {% endfor %}
+
+</body>
+</html>
