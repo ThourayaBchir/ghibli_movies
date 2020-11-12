@@ -35,3 +35,18 @@ flask run -h localhost -p 8000
 ````
 nosetests
 ````
+
+### to test pep8 requirements
+
+```
+flake8
+```
+
+### What can be improved
+
+- We can refactor the method <code>merge_films_and_peoples(films_list, peoples_list)</code> into 2 parts: one for 
+cleaning peoples data and another method for merging people and films data.
+
+- we can test more special cases, for example if the api returns inconsistent data: movies and 
+peoples doesn't match or for duplicate cases.
+
