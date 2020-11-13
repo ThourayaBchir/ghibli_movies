@@ -15,10 +15,8 @@ def index():
 @app.route('/movies/')
 @cache.cached(timeout=60)
 def movies():
-
     films_list = get_from_api(API_URL, 'films')
     peoples_list = get_from_api(API_URL, 'people')
-
     films_and_peoples_list = merge_films_and_peoples(films_list, peoples_list)
 
     return render_template('index.html', films_list=films_and_peoples_list)
@@ -36,7 +34,7 @@ def merge_films_and_peoples(films_list, peoples_list):
     df_peoples['film_id'] = df_peoples['films'].apply(lambda x: x.split('/')[-1])
 
     df_films = pd.DataFrame(films_list, columns=['id', 'title'])
-    df = pd.merge(df_films, df_peoples, left_on='id', right_on='film_id').groupby(['title']).\
-        agg({'names': lambda x: list(x)}).reset_index()
+    df = pd.merge(df_films, df_peoples, left_on='id', right_on='film_id', how='outer').fillna('').groupby(['title'])\
+        .agg({'names': lambda x: list(x)}).reset_index()
 
     return df.to_dict('records')
