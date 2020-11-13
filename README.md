@@ -2,16 +2,16 @@
 ### Steps to install the app
 
 ```
-mkdir ghibli && cd ghibli
+
+git clone git@github.com:ThourayaBchir/ghibli_movies.git
+
+cd ghibli_movies
 
 python3 -m venv ghibli_venv
 
 source ghibli_venv/bin/activate
 
-git clone git@github.com:ThourayaBchir/ghibli_movies.git
-
 pip install -r requirements.txt
-
 
 ```
 
@@ -49,4 +49,6 @@ cleaning peoples data and another method for merging people and films data.
 
 - we can test more special cases, for example if the api returns inconsistent data: movies and 
 peoples doesn't match or for duplicate cases.
+
+- to handle better bad responses from the api
 
