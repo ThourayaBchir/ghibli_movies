@@ -36,9 +36,9 @@ class MyTestCase(unittest.TestCase):
              'films': ["https://app.com/films/90b72513-afd4-4570-84de-a56c312fdf81",
                        "https://app.com/films/ff24da26-a969-4f0e-ba1e-a122ead6c6e3"]}]
 
-        self.films_list = [{'id': '2baf70d1-42bb-4437-b551-e5fed5a87abe', 'title': 'Castle in the Sky'},
-                           {'id': '90b72513-afd4-4570-84de-a56c312fdf81', 'title': 'The Cat Returns'},
-                           {'id': 'ff24da26-a969-4f0e-ba1e-a122ead6c6e3', 'title': 'Whisper of the Heart'}]
+        self.films_list = [{'url': 'https://app.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe', 'title': 'Castle in the Sky'},
+                           {'url': 'https://app.com/films/90b72513-afd4-4570-84de-a56c312fdf81', 'title': 'The Cat Returns'},
+                           {'url': 'https://app.com/films/ff24da26-a969-4f0e-ba1e-a122ead6c6e3', 'title': 'Whisper of the Heart'}]
 
         self.expected_result = [{'title': 'Castle in the Sky', 'names': ['Pazu']},
                                 {'title': 'The Cat Returns', 'names': ['Renaldo Moon aka Moon aka Muta']},
